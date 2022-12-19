@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "0f3cdb00-a8a0-44b3-9363-6dd418378c46",
+		"name": "Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4662788"
+	},
+	"item": [
+		{
+			"name": "POST: http://localhost:8083/api-poc/v1/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Jose\",\r\n  \"lastName\": \"González\",\r\n  \"lastName2\": \"Pérez\",\r\n  \"email\": \"jborgex@gmail.com\",\r\n  \"phone\": \"+3468946123\",\r\n  \"nif\": \"12345789J\",\r\n  \"nickname\": \"adin\",\r\n  \"password\": \"$2a$10$FRDQgZ83i4/E7Edw6cijIu6lRxiBv5GJu5wD8CiRWC19kYTJLMBRe\",\r\n  \"statusUser\": \"ACTIVO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: http://localhost:8083/api-poc/v1/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT: http://localhost:8083/api-poc/v1/users/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Pepe\",\r\n  \"lastName\": \"González\",\r\n  \"lastName2\": \"Pérez\",\r\n  \"email\": \"pepe3@axpe.es\",\r\n  \"phone\": \"+3468946123\",\r\n  \"nif\": \"12345789J\",\r\n  \"nickname\": \"adin\",\r\n  \"password\": \"$2a$10$FRDQgZ83i4/E7Edw6cijIu6lRxiBv5GJu5wD8CiRWC19kYTJLMBRe\",\r\n  \"statusUser\": \"ACTIVO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: http://localhost:8083/api-poc/v1/users/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api-poc/v1/users?lastName=González,Bonilla&lastName2=Pérez,Cuadrado&sortBy=firstName,-lastName2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users?lastName=González,Bonilla&lastName2=Pérez,Cuadrado&sortBy=firstName,-lastName2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "lastName",
+							"value": "González,Bonilla"
+						},
+						{
+							"key": "lastName2",
+							"value": "Pérez,Cuadrado"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName,-lastName2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api-poc/v1/users?lastName=González,Bonilla&lastName2=Pérez,Cuadrado&sortBy=firstName,-lastName2&offset=0&limit=20",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users?lastName=González,Bonilla&lastName2=Pérez,Cuadrado&sortBy=firstName,-lastName2&offset=0&limit=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "lastName",
+							"value": "González,Bonilla"
+						},
+						{
+							"key": "lastName2",
+							"value": "Pérez,Cuadrado"
+						},
+						{
+							"key": "sortBy",
+							"value": "firstName,-lastName2"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api-poc/v1/users/1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pepe2@axpe.es\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api-poc/v1/users/1 statusUser",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"statusUser\":\"ACTIVO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api-poc/v1/users/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/api-poc/v1/validate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"pepe1234@axpe.es\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api-poc/v1/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api-poc",
+						"v1",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "admin",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

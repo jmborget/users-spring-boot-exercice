@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.axpe</groupId>
+		<artifactId>users-spring-boot-exercice-app</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>users-spring-boot-exercice-service</artifactId>
+	<packaging>jar</packaging>
+	<name>users-spring-boot-exercice-service</name>
+	<description>Modulo que contiene las clases de negocio</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.axpe</groupId>
+			<artifactId>users-spring-boot-exercice-service-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.axpe</groupId>
+			<artifactId>users-spring-boot-exercice-persistence</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- Mapeo de clases -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Mock bean test library -->
+		<dependency>
+			<groupId>uk.co.jemos.podam</groupId>
+			<artifactId>podam</artifactId>
+			<scope>test</scope>
+		</dependency>		
+		<!-- Mock WebServer  -->
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>mockwebserver</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- json-patch  -->
+		<dependency>
+		    <groupId>com.github.java-json-tools</groupId>
+		    <artifactId>json-patch</artifactId>
+		    <version>1.12</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,61 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /api-poc/v1    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS   
+  
+spring:
+  profiles:
+    active: local
+
+# H2
+  h2:    
+    console:
+      enabled: true
+      path: /h2-console     
+      settings:
+         web-allow-others: true
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      platform: h2
+      data-locations: classpath:db/schema-h2.sql , classpath:db/data-h2.sql    
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        "[format_sql]": true
+        "[hibernate.dialect]": org.hibernate.dialect.H2Dialect
+
+  security:      
+    user: 
+      name: admin
+      password: $2a$10$FRDQgZ83i4/E7Edw6cijIu6lRxiBv5GJu5wD8CiRWC19kYTJLMBRe
+      
+             
+axpe:
+  poc: 
+    # Token generado para el user y password de definidos más arriba (spring.security admin/test)
+    token: YWRtaW46dGVzdA==        
+  common:
+    rest:
+      webclient:
+        enabled: true       
+        baseUrl: https://global-email-v4.p.rapidapi.com/v4/WEB
+        connectTimeout: 25000
+        readTimeout: 25000
+        writeTimeout: 25000

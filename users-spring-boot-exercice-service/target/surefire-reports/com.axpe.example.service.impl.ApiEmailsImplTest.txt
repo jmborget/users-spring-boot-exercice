@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.axpe.example.service.impl.ApiEmailsImplTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.302 s - in com.axpe.example.service.impl.ApiEmailsImplTest

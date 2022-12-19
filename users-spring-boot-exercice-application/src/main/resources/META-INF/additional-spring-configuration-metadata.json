@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "axpe.poc.token",
+    "type": "java.lang.String",
+    "description": "A description for 'axpe.poc.token'"
+  },
+  {
+    "name": "axpe.common.rest.webclient.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'axpe.common.rest.webclient.enabled'"
+  },
+  {
+    "name": "axpe.common.rest.webclient.baseUrl",
+    "type": "java.lang.String",
+    "description": "A description for 'axpe.common.rest.webclient.baseUrl'"
+  },
+  {
+    "name": "axpe.common.rest.webclient.connectTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'axpe.common.rest.webclient.connectTimeout'"
+  },
+  {
+    "name": "axpe.common.rest.webclient.readTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'axpe.common.rest.webclient.readTimeout'"
+  },
+  {
+    "name": "axpe.common.rest.webclient.writeTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'axpe.common.rest.webclient.writeTimeout'"
+  }
+]}

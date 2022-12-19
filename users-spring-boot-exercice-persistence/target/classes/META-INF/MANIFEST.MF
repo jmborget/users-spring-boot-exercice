@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Implementation-Title: users-spring-boot-exercice-persistence
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor: Axpe Consulting S.L.
+Created-By: Maven Integration for Eclipse
+

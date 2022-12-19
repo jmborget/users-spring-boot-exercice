@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.axpe.example.presentation.controllers.impl.UsersControllerTests
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 3.072 s - in com.axpe.example.presentation.controllers.impl.UsersControllerTests
